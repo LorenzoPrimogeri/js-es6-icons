@@ -13,28 +13,28 @@ dinamico: generare in modo casuale un codice colore, sapendo che la notazione
 esadecimale è formata dal simbolo "#" seguito da 6 caratteri alfanumerici compresi
 tra 0 e 9 e A e F.
 2- popolare le options della select della milestone 3 dinamicamente. */
+const estraIcona = (array) => array.forEach(element => createIcon(element));
+/* funzione scritta senza arrow function
+function estraIcona(array) {
+    for (let i = 0; i < array.length; i++) {
+        const icon = array[i];
+        createIcon(icon);
+    }
+} 
+*/
 const row = document.querySelector(".row");
-
 estraIcona(icone);
 function selected() {
+    //questa funzione parte solo quando viene selezionata una nuova opzione al select (infatti viene richiamata nel html)
     row.innerHTML = " ";
     const selezione = document.getElementById("Selezione");
     let selectedOption = selezione.value;
     if (selectedOption == "all") {
         estraIcona(icone);
     }
-    console.log(selectedOption);
-
     const arraytipo = icone.filter(element => element.type === selectedOption);
-    console.log(arraytipo);
     estraIcona(arraytipo);
 };
-function estraIcona(array) {
-    for (let i = 0; i < array.length; i++) {
-        const icon = array[i];
-        createIcon(icon);
-    }
-}
 function createIcon(icon) {
     const card = document.createElement('div');
     card.className = "col-2 text-center bg-white pt-4 m-4 rounded-3";
