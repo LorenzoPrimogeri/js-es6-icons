@@ -1,20 +1,22 @@
 // ` ` ${}
 const row = document.querySelector(".row");
-estraIcona();
+estraIcona(icone);
 function selected() {
     const selezione = document.getElementById("Selezione");
     let selectedOption = selezione.value;
     console.log(selectedOption);
     row.innerHTML = " ";
+    const arraytipo = icone.filter(element => element.type === selectedOption);
+    console.log(arraytipo);
+    estraIcona(arraytipo)
 };
-function estraIcona() {
-    for (let i = 0; i < icone.length; i++) {
-        const icon = icone[i];
+function estraIcona(array) {
+    for (let i = 0; i < array.length; i++) {
+        const icon = array[i];
         createIcon(icon);
     }
 }
 function createIcon(icon) {
-
     const card = document.createElement('div');
     card.className = "col-2 text-center bg-white pt-4 m-4 rounded-3";
     card.innerHTML = `
