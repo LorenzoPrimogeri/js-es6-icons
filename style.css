@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.c-lightblue{
+   color: hsl(195deg 72% 52%);
+}
+.bg-lightblue{
+   background-color:hsl(195deg 73% 51%);
+ }
+ .bg-grey{
+    background-color:hsl(0deg 0% 87%);
+  }
+  .bg-white{ 
+    background-color: hsl(0deg 0% 96%);
+  }
+  .c-white{
+    color: white;
+ }
+ i{ 
+     font-size: 50px;
+ }
+ 
+ /* icon color */
+ .c-orange{
+    color: orange;
+ }
+ .c-green{
+    color:green;
+ }
+ .c-blue{
+    color: blue;
+ }
